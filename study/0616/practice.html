@@ -1,61 +1,85 @@
 <html>
-<head>
-    <title>폼 관련 태그 문제 10선</title>
-</head>
-<body>
-    <h2>1. 사용자 이름과 이메일을 입력받는 폼을 만들어 보세요.</h2>
-    <form>
-        <label for="name">name</label>
-        <input type="text"/>
-        <label for="email">email</label>
-        <input type="email"/>
-        <input type="submit" value="전송" />
-    </form>
-    <h2>2. 비밀번호와 비밀번호 확인 입력 필드를 추가해보세요.</h2>
-        <label for="password">비밀번호</label>
-        <input type="password" placeholder="비밀번호 입력"/>
-        <label for="password">비밀번호 확인</label>
-        <input type="password" placeholder="비밀번호 확인"/>
-    <h2>3. 생년월일을 입력받을 수 있도록 <input type="date"> 필드를 만들어보세요.</h2>
-        <label for="date">생년월일</label>
-        <input type="date"/>
-    <h2>4. 뉴스레터 수신 여부를 체크박스로 구현해보세요</h2>
-        <label>뉴스레터 수신에 동의합니다.</label>
-        <input type="checkbox"/>
-    <h2>5. 성별을 선택할 수 있는 라디오 버튼 2개를 만들어 보세요.</h2>
-        <label for="name">남자</label>
-        <input type="radio" name="gender"/>
-        <label for="name">여자</label>
-        <input type="radio" name="gender"/>
-    <h2>6. 국가를 선택할 수 있는 select 태그를 만들어보세요.</h2>
-        <label for="country">국가 선택</label>
-                <select name="country" id="country">
-                        <option value="korea">대한민국</option>
-                        <option value="usa">미국</option>
-                        <option value="japan">일본</option>
-                </select>
-    <h2>7. 자기소개를 입력할 수 있는 textarea 필드를 만들어보세요.</h2>
-        <label>자기소개</label>
-        <textarea></textarea>
-    <h2>8. 파일 업로드 기능을 추가해보세요.</h2>
-        <label>프로필 사진 추가</label>
-        <input type="file"/>
-    <h2>9. 슬라이더로 음량을 조절하는 입력 필드를 만들어보세요.</h2>
-        <label>음량 조절</label>
-        <input type="range" min="0" max="100"/>
-    <h2>10. 전체 폼을 fieldset과 legend로 감싸고, 제목을 '회원가입 폼'으로 설정해보세요.</h2>
-        <fieldset>
-            <legend>회원가입 폼</legend>
-            <label>이름</label>
-            <input type="text">
-            <br/>
-            <label>이메일</label>
-            <input type="email">
-            <br/>
-            <label>비밀번호</label>
-            <input type="password">
-            <br/>
-            <input type="submit" value="제출">
-        </fieldset>
-</body>
+	<head>
+		<title>폼 관련 태그 문제 10선</title>
+	</head>
+	<body>
+		<h2>1. 사용자 이름과 이메일을 입력받는 폼을 만들어 보세요.</h2>
+		<form>
+			<label for="name">이름:</label>
+			<input type="text" id="name" name="name" /><br />
+
+			<label for="email">이메일:</label>
+			<input type="email" id="email" name="email" /><br />
+
+			<button type="submit">제출</button>
+		</form>
+		<h2>2. 비밀번호와 비밀번호 확인 입력 필드를 추가해보세요.</h2>
+		<form>
+			<input type="password" name="pw" placeholder="비밀번호 입력" /><br />
+			<input type="password" name="pw_check" placeholder="비밀번호 확인" />
+		</form>
+		<h2>
+			3. 생년월일을 입력받을 수 있도록 <input type="date" /> 필드를
+			만들어보세요.
+		</h2>
+		<form>
+			<label for="birth">생년월일:</label>
+			<input type="date" id="birth" name="birth" />
+		</form>
+		<h2>4. 뉴스레터 수신 여부를 체크박스로 구현해보세요</h2>
+		<form>
+			<label>
+				<input type="checkbox" name="newsletter" /> 뉴스레터 수신에 동의합니다.
+			</label>
+		</form>
+		<h2>5. 성별을 선택할 수 있는 라디오 버튼 2개를 만들어 보세요.</h2>
+		<form>
+			<label><input type="radio" name="gender" value="male" /> 남자</label>
+			<label><input type="radio" name="gender" value="female" /> 여자</label>
+		</form>
+		<h2>6. 국가를 선택할 수 있는 select 태그를 만들어보세요.</h2>
+		<form>
+			<label for="country">국가:</label>
+			<select id="country" name="country">
+				<option value="kr" selected>대한민국</option>
+				<option value="us">미국</option>
+				<option value="jp">일본</option>
+			</select>
+		</form>
+		<h2>7. 자기소개를 입력할 수 있는 textarea 필드를 만들어보세요.</h2>
+		<form>
+			<label for="intro">자기소개:</label><br />
+			<textarea id="intro" name="intro" rows="4" cols="40"></textarea>
+		</form>
+		<h2>8. 파일 업로드 기능을 추가해보세요.</h2>
+		<form>
+			<label for="photo">프로필 사진:</label>
+			<input type="file" id="photo" name="photo" />
+		</form>
+		<h2>9. 슬라이더로 음량을 조절하는 입력 필드를 만들어보세요.</h2>
+		<form>
+			<label for="volume">음량:</label>
+			<input type="range" id="volume" name="volume" min="0" max="100" />
+		</form>
+		<h2>
+			10. 전체 폼을 fieldset과 legend로 감싸고, 제목을 '회원가입 폼'으로
+			설정해보세요.
+		</h2>
+		<form>
+			<fieldset>
+				<legend>회원가입 폼</legend>
+
+				<label for="username">이름:</label>
+				<input type="text" id="username" name="username" /><br />
+
+				<label for="email">이메일:</label>
+				<input type="email" id="email" name="email" /><br />
+
+				<label for="password">비밀번호:</label>
+				<input type="password" id="password" name="password" /><br />
+
+				<button type="submit">가입하기</button>
+			</fieldset>
+		</form>
+	</body>
 </html>
