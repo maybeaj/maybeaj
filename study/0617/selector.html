@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selector</title>
+    <style>
+        h1, h3 {
+            color:red;
+        }
+        .subTitle {
+            background-color: yellow;
+        }
+        .card {
+            font-size: 20px;
+            font-family:'Courier New', Courier, monospace;
+            font-weight: 300px;
+        }
+        .cardButton {
+            border: none; 
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px; 
+            border-radius: 10px; 
+            color:white; 
+            width: 200px; 
+            height:50px; 
+            background-color: coral;
+        }
+        #subsubTitle {
+            color: cornflowerblue;
+        }
+        td {
+            border: 1px solid black;
+        }
+        input[type="text"]{
+            background-color: lightgrey;
+        }
+        * {
+            margin: 0;
+            padding: 0; /*주석*/
+        }
+        div  p {
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Selector</h1>
+    <h2 class="subTitle">CSS Selector</h1>
+    <h3 id="subsubTitle">CSS Selector</h3>
+    <h4>CSS Selector</h4>
+    <h5 class="subTitle">CSS Selector</h5>
+    <h6 id="subsubTitle">CSS Selector</h6>
+
+    <div class="card">
+        <p>This is inner card.</p>
+        <form>
+            <p>This is inner card.</p>
+            <p>This is inner card.</p>
+            <p>This is inner card.</p>
+            <p>This is inner card.</p>
+            <p>This is inner card.</p>
+        </form>
+    </div>
+
+    <div class="card">
+        <p>This is second inner card.</p>
+    </div>
+
+    <div class="card">
+        <p>This is a table example.</p>
+        <table style="width: 500px; border: 1px solid black">
+            <tr>
+                <td style="width: 100px;">Name:</td>
+                <td style="width: 400px">
+                    <input type="text" name="name" />
+                </td>
+            </tr>
+            <tr>
+                <td>E_mail:</td>
+                <td>
+                    <input type="text" name="email" />
+                </td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td>
+                    <textarea name="message" rows="8"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" class="cardButton">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
