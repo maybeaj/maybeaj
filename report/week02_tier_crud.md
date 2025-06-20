@@ -85,7 +85,7 @@
 
 ---
 
-*참고 자료: “3계층 구조(3 Tier‑ Architecture) 이해하기” — 스마트인재개발원 :contentReference[oaicite:7]{index=7}*
+
 
 
 # 📌 CRUD 개념과 웹 흐름
@@ -167,5 +167,6 @@ RESTful 설계에서는 CRUD에 따라 적절한 **HTTP 메서드**와 **URL 패
 
 ## 📚 참고 자료
 
+- 🔗 [3계층 구조 설명 - Jaws Coding 블로그](https://jaws-coding.tistory.com/9)
 - 🔗 [CRUD란 무엇인가 - idkim97 블로그](https://idkim97.github.io/2022-08-17-CRUD%EB%9E%80/)
 - 🔗 [웹의 작동 원리 - velog @0hoxy](https://velog.io/@0hoxy/%EC%9B%B9%EC%9D%98-%EC%9E%91%EB%8F%99-%EC%9B%90%EB%A6%AC)
