@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>함수 예제</title>
+	</head>
+	<body>
+		<script>
+			// 함수 예제
+			// function greet() {
+			//     alert("반갑습니다!");
+			// }
+
+			// greet();
+
+			// function showName() {
+			//     let name = "이순신";
+			//     name="이성계";
+			//     console.log(name);
+			// }
+
+			// showName();
+
+			// console.log("outer", name);
+
+			// function add(a,b) {
+			//     return a + b;
+			// }
+
+			// let sum = add(3,5);
+			// console.log(sum);
+
+			// BMI 계산기
+			// 몸무게 / (키 * 키)
+
+			// function bmi(a,b) {
+			//     return a / ( b * b );
+			// }
+			// let result = bmi(46,1.60);
+			// console.log(result);
+
+			// javascript beginner 연습문제 7,8,9,10
+			// 7. 1부터 10까지의 숫자를 차례대로 출력
+			for (let i = 1; i < 11; i++) {
+				console.log(i);
+			}
+			// 8. 1부터 100까지 숫자 중에서 5의 배수만 출력해보세요.
+			for (let j = 1; j < 101; j++) {
+				if (j % 5 === 0) {
+					console.log(j);
+				}
+			}
+			// 9. 사용자가 입력한 숫자까지 1씩 증가하면서 출력해보세요.
+			let input = Number(prompt("숫자 입력"));
+			for (let k = 1; k <= input; k++) {
+				console.log(k);
+			}
+			// 10. 구구단 2단을 출력해보세요.
+			let l = 2;
+			for (let m = 1; m < 10; m++) {
+				console.log(`${l} * ${m} = ${l * m}`);
+			}
+
+            // Javascript 중급 연습문제 10선
+		</script>
+	</body>
+</html>

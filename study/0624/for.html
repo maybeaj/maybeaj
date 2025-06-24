@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>반복문 예제</title>
+	</head>
+	<body>
+		<script>
+			// 구구단 출력
+			// 2단
+			// 2 * 1 = 2
+			// 3단
+			console.log("구구단 출력");
+			for (let i = 2; i <= 9; i++) {
+				console.log(`${i}단`);
+				for (let j = 1; j <= 9; j++) {
+					console.log(`${i} * ${j} = ${i * j}`);
+				}
+			}
+			// 짝수단 출력 - 한 줄로 찍기..(ing)
+			console.log("짝수단 출력");
+			for (let i = 2; i <= 9; i++) {
+				if (i % 2 == 0) {
+					console.log(`${i}단`);
+					for (let j = 1; j <= 9; j++) {
+						console.log(`${i} * ${j} = ${i * j}`);
+					}
+				}
+			}
+			// * 찍기
+			for (let i = 1; i <= 5; i++) {
+				let stars = "";
+				for (let j = 1; j <= i; j++) {
+					stars += "*";
+				}
+				console.log(stars);
+			}
+
+            // * 찍기 프롬프트 받고 화면 출력
+			// const num = prompt("숫자를 입력하시오: ");
+			// let mark = "";
+
+			// for (let i = 1; i <= num; i++) {
+			// 	for (let j = 1; j <= i; j++) {
+			// 		mark += "*";
+			// 	}
+			// 	mark += "<br>";
+			// }
+
+			// document.write(mark);
+
+            
+		</script>
+	</body>
+</html>
