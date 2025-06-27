@@ -14,7 +14,7 @@ HTTP 메시지는 **ASCII 인코딩된 텍스트**로 구성되며, 설정 파�
 
 요청과 응답의 구조는 유사하며, 다음과 같은 네 가지 요소로 구성된다:
 
-![alt text](image-2.png)
+![HTTP 메시지 구조](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FxuDiU%2FbtsnFEVkBEY%2FAAAAAAAAAAAAAAAAAAAAABWYciMqIMUAjxnt0xRX6DPjIqqrkPCRs8D3-Oe2sMkX%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1751295599%26allow_ip%3D%26allow_referer%3D%26signature%3DYWbVs3cAaydxu2hNtJ%252Byi4mS4io%253D)
 
 1. **Start Line**: 요청 또는 응답의 상태를 나타내는 첫 줄  
 2. **HTTP Header**: 요청/응답에 대한 부가 정보를 담는 헤더 집합  
@@ -34,7 +34,7 @@ HTTP 메시지는 **ASCII 인코딩된 텍스트**로 구성되며, 설정 파�
 
 ### 2. Header
 
-![alt text](image-3.png)
+![Request](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FcW94YJ%2FbtsnSZRa0NG%2FAAAAAAAAAAAAAAAAAAAAAFqQL15-F9vf3g_m-DJ7RfquRWZLBQNCz42coGhCuQv0%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1751295599%26allow_ip%3D%26allow_referer%3D%26signature%3DKPKNQTKhWoA%252BAQHo5alFJlnoazU%253D)
 
 - 형식: `헤더이름: 값`  
 - 대소문자 구분 없음
@@ -67,7 +67,7 @@ HTTP 메시지는 **ASCII 인코딩된 텍스트**로 구성되며, 설정 파�
 
 ### 2. Header
 
-![alt text](image-4.png)
+![Response](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbCf4kD%2FbtsnFE149jL%2FAAAAAAAAAAAAAAAAAAAAADWkqR-MYTX50pjtlh-f0Z5Ek-8Pe5YNOzwkC4j5oUnW%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1751295599%26allow_ip%3D%26allow_referer%3D%26signature%3D%252B4y97p22BKeAjqSXtuw5Y5KPmfY%253D)
 
 - 요청 헤더와 동일한 형식  
 - 몇 가지 그룹으로 나뉨
@@ -123,7 +123,7 @@ HTTP 메시지는 **ASCII 인코딩된 텍스트**로 구성되며, 설정 파�
 
 ## 🔁 Ajax 동작 원리
 
-![alt text](image-7.png)
+![alt text](https://velog.velcdn.com/images%2Fhahan%2Fpost%2Fc1ada5b4-7600-48aa-af9d-1cbbd91519ee%2Fimage.png)
 
 1. 사용자 이벤트 발생  
 2. 이벤트 핸들러가 JavaScript 실행  
@@ -151,7 +151,7 @@ HTTP 메시지는 **ASCII 인코딩된 텍스트**로 구성되며, 설정 파�
 - **Request, Response 객체를 공유**  
 - 최초 요청 정보가 다음 페이지까지 **유지됨**
 
-![alt text](image-5.png)
+![Forward](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fb9U3fY%2FbtqyeoHglrc%2FAAAAAAAAAAAAAAAAAAAAAKOi3Kbo9DAhvtPezN-36IgQcUlW2JXkE6lg5gIpi0vN%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1751295599%26allow_ip%3D%26allow_referer%3D%26signature%3DwftV0pnTkaN12KCfRRQuhfIQwjg%253D)
 
 ### ✅ 특징
 
@@ -172,7 +172,7 @@ HTTP 메시지는 **ASCII 인코딩된 텍스트**로 구성되며, 설정 파�
 - 클라이언트는 **URL 변경** 후 **새 요청** 전송
 - **Request, Response 객체는 새로 생성됨**
 
-![alt text](image-6.png)
+![Redirect](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FF3O4A%2FbtqydA2GDYr%2FAAAAAAAAAAAAAAAAAAAAAPItgz6Y95mEIJ-3O9epkJgpZo1sfqlHk3TbU3c5FQNe%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1751295599%26allow_ip%3D%26allow_referer%3D%26signature%3Dk6mWvsEQPROgdQVR182LvWvBTxg%253D)
 
 ### ✅ 특징
 
