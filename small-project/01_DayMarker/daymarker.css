@@ -1,0 +1,38 @@
+.calendar {
+	width: 700px;
+	margin: 0 auto;
+	margin-top: 20px;
+	font-family: "Patrick Hand", cursive;
+}
+
+.calendar-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	margin-bottom: 15px;
+	gap: 20px;
+}
+
+.weekday-row {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.date-grid {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	gap: 2px;
+}
+
+.date-cell {
+	border: 1px solid #ccc;
+	height: 90px;
+	padding: 6px;
+	text-align: left;
+}
+
