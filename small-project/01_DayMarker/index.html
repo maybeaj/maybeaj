@@ -7,28 +7,41 @@
 		<link rel="stylesheet" href="daymarker.css" />
 	</head>
 	<body>
-		<div class="calendar">
-			<div class="calendar-header">
-				<button id="prev-month">◀</button>
-				<span id="month-label">JUNE</span>
-				<button id="next-month">▶</button>
+		<div class="layout">
+			<div class="sidebar">
+				<div class="title">DayMarker</div>
+				<div class="box">
+					<strong>Goal</strong>
+					<textarea
+						id="goalBox"
+						placeholder="이번 달 목표를 입력하세요"
+					></textarea>
+				</div>
+				<div class="box">
+					<strong>Memo</strong>
+					<div id="quoteBox" style="font-size: 14px; line-height: 1.5"></div>
+				</div>
 			</div>
 
-			<div class="weekday-row">
-				<div>MON</div>
-				<div>TUE</div>
-				<div>WED</div>
-				<div>THU</div>
-				<div>FRI</div>
-				<div>SAT</div>
-				<div>SUN</div>
-			</div>
+			<div class="calendar">
+				<div class="calendar-header">
+					<button id="prev-month">◀</button>
+					<span id="month-label"></span>
+					<button id="next-month">▶</button>
+				</div>
 
-			<div class="date-grid" id="date-grid">
-				<!-- JS로 42개 날짜 셀 생성 -->
-			</div>
+				<div class="weekday-row">
+					<div>SUN</div>
+					<div>MON</div>
+					<div>TUE</div>
+					<div>WED</div>
+					<div>THU</div>
+					<div>FRI</div>
+					<div>SAT</div>
+				</div>
 
-			
+				<div class="date-grid" id="date-grid"></div>
+			</div>
 		</div>
 
 		<script src="daymarker.js"></script>
