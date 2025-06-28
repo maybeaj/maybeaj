@@ -41,16 +41,41 @@ function renderCalendar(year, month) {
 
 	const firstDay = new Date(year, month, 1).getDay();
 	const lastDate = new Date(year, month + 1, 0).getDate();
-
 	const adjustedFirstDay = firstDay;
+
+	const markKey = `${year}-${String(month + 1).padStart(2, "0")}-marked`;
+	const markedDays = JSON.parse(localStorage.getItem(markKey) || "[]");
+
 	let day = 1;
 	for (let i = 0; i < 42; i++) {
 		const cell = document.createElement("div");
 		cell.className = "date-cell";
+
 		if (i >= adjustedFirstDay && day <= lastDate) {
+			const dateId = day;
 			cell.textContent = day;
+
+			if (markedDays.includes(dateId)) {
+				const mark = document.createElement("div");
+				mark.className = "mark";
+				mark.textContent = "\u2716";
+				cell.appendChild(mark);
+			}
+
+			cell.addEventListener("click", () => {
+				const index = markedDays.indexOf(dateId);
+				if (index > -1) {
+					markedDays.splice(index, 1);
+				} else {
+					markedDays.push(dateId);
+				}
+				localStorage.setItem(markKey, JSON.stringify(markedDays));
+				renderCalendar(currentYear, currentMonth); // re-render to reflect change
+			});
+
 			day++;
 		}
+
 		grid.appendChild(cell);
 	}
 
