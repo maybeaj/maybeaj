@@ -7,6 +7,11 @@ let current = new Date();
 let currentYear = current.getFullYear();
 let currentMonth = current.getMonth();
 
+const today = new Date();
+const todayYear = today.getFullYear();
+const todayMonth = today.getMonth();
+const todayDate = today.getDate();
+
 const monthNames = [
 	"January",
 	"February",
@@ -55,10 +60,14 @@ function renderCalendar(year, month) {
 			const dateId = day;
 			cell.textContent = day;
 
+			if (year === todayYear && month === todayMonth && day === todayDate) {
+				cell.classList.add("today");
+			}
+
 			if (markedDays.includes(dateId)) {
 				const mark = document.createElement("div");
 				mark.className = "mark";
-				mark.textContent = "\u2716";
+				mark.textContent = "✖";
 				cell.appendChild(mark);
 			}
 
@@ -70,7 +79,7 @@ function renderCalendar(year, month) {
 					markedDays.push(dateId);
 				}
 				localStorage.setItem(markKey, JSON.stringify(markedDays));
-				renderCalendar(currentYear, currentMonth); // re-render to reflect change
+				renderCalendar(currentYear, currentMonth);
 			});
 
 			day++;
@@ -79,11 +88,9 @@ function renderCalendar(year, month) {
 		grid.appendChild(cell);
 	}
 
-	// Goal 불러오기
-	const key = `${year}-${String(month + 1).padStart(2, "0")}-goal`;
-	goalBox.value = localStorage.getItem(key) || "";
+	const goalKey = `${year}-${String(month + 1).padStart(2, "0")}-goal`;
+	goalBox.value = localStorage.getItem(goalKey) || "";
 
-	// Quote 출력
 	showRandomQuote();
 }
 

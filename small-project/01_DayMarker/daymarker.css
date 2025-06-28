@@ -93,4 +93,6 @@ body {
 	pointer-events: none;
 }
 
-
+.date-cell.today {
+	background-color: #dbeafe;
+}
