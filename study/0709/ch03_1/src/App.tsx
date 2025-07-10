@@ -8,9 +8,9 @@ export default function App() {
 	return (
 		<div>
 			<BootStrap />
-      <Icon />
-      <Style />
-      <UsingIcon />
+			<Icon />
+			<Style />
+			<UsingIcon />
 		</div>
 	);
 }
