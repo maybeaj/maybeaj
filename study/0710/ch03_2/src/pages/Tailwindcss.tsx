@@ -7,6 +7,8 @@ export default function Tailwindcss() {
 			<p className="italic text-gray-50 line-clamp-3">
 				{D.randomParagraphs(10)}
 			</p>
+			<div className="text-4xl font-bold text-red-500 p-4">Tailwind?</div>
+			<button className="btn btn-primary">Daisy?</button>
 			<button className="btn btn-primary" style={{ textTransform: "none" }}>
 				Button
 			</button>
