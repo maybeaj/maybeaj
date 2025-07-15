@@ -22,30 +22,31 @@ export default function App() {
 	// );
 
 	// Using the custom hook
-	// const today = useClock();
-	// return <Clock today={today} />;
+	const today = useClock();
+	return <Clock today={today} />;
 
-	const [number1, setNumber1] = useState(0);
-	const [number2, setNumber2] = useState(0);
+	//덧셈기 만들기
+	// const [number1, setNumber1] = useState(0);
+	// const [number2, setNumber2] = useState(0);
 
-	return (
-		<div>
-			<h2>{"덧셈기"}</h2>
-			<div className="flex flex-row items-center">
-				<input
-					type="number"
-					value={number1}
-					onChange={(e) => setNumber1(Number(e.target.value))}
-				/>
-				<span>{"+"}</span>
-				<input
-					type="number"
-					value={number2}
-					onChange={(e) => setNumber2(Number(e.target.value))}
-				/>
-			</div>
-		<p>{`덧셈 결과는: ${number1} + ${number2} = ${number1 + number2}입니다.`}</p>
-			<br />
-		</div>
-	);
+	// return (
+	// 	<div>
+	// 		<h2>{"덧셈기"}</h2>
+	// 		<div className="flex flex-row items-center">
+	// 			<input
+	// 				type="number"
+	// 				value={number1}
+	// 				onChange={(e) => setNumber1(Number(e.target.value))}
+	// 			/>
+	// 			<span>{"+"}</span>
+	// 			<input
+	// 				type="number"
+	// 				value={number2}
+	// 				onChange={(e) => setNumber2(Number(e.target.value))}
+	// 			/>
+	// 		</div>
+	// 	<p>{`덧셈 결과는: ${number1} + ${number2} = ${number1 + number2}입니다.`}</p>
+	// 		<br />
+	// 	</div>
+	// );
 }
