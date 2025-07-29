@@ -25,4 +25,5 @@ export const insertTest = () => {
     M.connectAndUseDB(connectCB, 'ch07')
 }
 
+insertTest()
 

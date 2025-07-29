@@ -1,45 +1,19 @@
-import express from "express"
-import { insertTest } from "./test/insertTest"
-import { findAll, findOne } from "./test/findTest"
-import { updateUser } from "./test/updateTest"
-import { deleteUser } from "./test/deleteTest"
+import { createServer } from "http";
+import { getPublicDirPath } from "./config";
+import { makeDir } from "./utils";
+import { createExpressApp } from "./express";
+import type { MongoDB } from "./mongodb";
+import { connectAndUseDB } from "./mongodb";
 
-const hostname = "localhost"
-const port = 3000
+makeDir(getPublicDirPath());
 
-const app = express()
-app.use(express.json())
+const connectCallback = (db: MongoDB) => {
+	const hostname = "localhost",
+		port = 3000;
 
-// GET 전체
-app.get("/", (req, res) => {
-	findAll()
-	res.json({ ok: true, message: "전체 조회 완료 (콘솔에서 확인)" })
-})
+	createServer(createExpressApp()).listen(port, () =>
+		console.log(`connect http://${hostname}:${port}`)
+	)
+}
 
-// GET 하나
-app.get("/:id", (req, res) => {
-	findOne(req.params.id)
-	res.json({ ok: true, message: "단일 조회 완료 (콘솔에서 확인)" })
-})
-
-// POST 삽입
-app.post("/", (req, res) => {
-	insertTest()
-	res.json({ ok: true, message: "삽입 완료 (Jack, Jane, Tom)" })
-})
-
-// PUT 수정
-app.put("/:id", (req, res) => {
-	updateUser(req.params.id, req.body)
-	res.json({ ok: true, message: "수정 완료 (콘솔에서 확인)" })
-})
-
-// DELETE 삭제
-app.delete("/:id", (req, res) => {
-	deleteUser(req.params.id)
-	res.json({ ok: true, message: "삭제 완료 (콘솔에서 확인)" })
-})
-
-app.listen(port, hostname, () =>
-	console.log(`connect http://${hostname}:${port}`)
-)
+connectAndUseDB(connectCallback, 'ch07')

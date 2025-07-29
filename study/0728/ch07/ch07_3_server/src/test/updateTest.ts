@@ -1,16 +1,34 @@
-// src/test/updateTest.ts
-import * as M from '../mongodb'
+import * as M from "../mongodb";
 
-const connectCB = async (db: M.MongoDB, id: string, body: any) => {
-	const user = db.collection('user')
-	const result = await user.findOneAndUpdate(
-		{ _id: new M.ObjectId(id) },
-		{ $set: body },
-		{ returnDocument: 'after' }
-	)
-	console.log('📝 updated user:', result)
-}
+const connectCB = async (db: M.MongoDB) => {
+	try {
+		const user = db.collection("user");
 
-export const updateUser = (id: string, body: any) => {
-	M.connectAndUseDB((db) => connectCB(db, id, body), 'ch07')
-}
+		await user.updateOne(
+			{ name: { $regex: /^J.*$/ } },
+			{ $set: { name: "John" }, $inc: { age: 10 } }
+		);
+
+		const updateOneResult = await user.find({}).toArray();
+		console.log("updateOneResult", updateOneResult);
+
+		await user.updateMany({ name: { $regex: /^J.*$/ } }, { $inc: { age: 10 } });
+		const updateManyResult = await user.find({}).toArray();
+		console.log("updateManyResult", updateManyResult);
+
+		const findOneResult = await user.findOneAndUpdate(
+			{ name: "John" },
+			{ $set: { age: 66 } },
+			{ returnDocument: "after" }
+		);
+		console.log("findOneResult", findOneResult);
+	} catch (e) {
+		if (e instanceof Error) console.log(e.message);
+	}
+};
+
+const updateTest = () => {
+	M.connectAndUseDB(connectCB, "ch07");
+};
+
+updateTest();
