@@ -1,0 +1,30 @@
+@server = http://localhost:3000
+### ① GET 요청 - 모든 person 조회
+GET {{server}}/person
+Content-Type: application/json
+
+### ② POST 요청 - person 추가
+POST {{server}}/person
+Content-Type: application/json
+
+{
+  "name": "Andy Park",
+  "age": 30,
+  "email": "andy@backend.com"
+}
+
+### ③ GET 요청 - 특정 person 조회
+GET {{server}}/person/andy@backend.com
+Content-Type: application/json
+
+### ④ PUT 요청 - 문서 수정하기
+PUT {{server}}/person/andy@backend.com
+Content-Type: application/json
+
+{
+  "age": 32
+}
+
+### ⑤ DELETE 요청 - 문서 삭제하기
+DELETE {{server}}/person/andy@backend.com
+Content-Type: application/json
