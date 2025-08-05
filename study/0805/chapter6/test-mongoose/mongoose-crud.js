@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const Person = require("./person-model");
+require("dotenv").config();
 
 mongoose.set("strictQuery", false);
 

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
-const uri =
-  "mongodb+srv://<user>:<password>@<atlashost>/board?retryWrites=true&w=majority";
+require("dotenv").config();
+const uri = process.env.MONGOOSE_URI;
 
 module.exports = function () {
   return mongoose.connect(uri, { useNewUrlParser: true });
